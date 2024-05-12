@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --green: rgb(43, 210, 43);
+  --white: white;
+}
+.my-main-div {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  background: url("https://wallpapercave.com/wp/wp9875549.jpg") no-repeat;
+  background-size: cover;
+  justify-content: center;
+}
+.app {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* max-width: 600px; */
+  background: transparent;
+}
+.app > .screen {
+  display: none;
+}
+.app > .screen.active {
+  display: block;
+}
+
+.chat-screen {
+  height: 100%;
+}
+.screen .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  background: var(--white);
+  padding: 20px;
+}
+
+.screen .form-input {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.screen h2 {
+  font-size: 30px;
+  font-family: cursive;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.screen h2 .join_text {
+  color: red;
+  font-size: 10px;
+}
+
+.screen .form-input label {
+  display: block;
+  margin-bottom: 5px;
+}
+.screen .form-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 16px;
+}
+.screen .form-input button {
+  padding: 10px 20px;
+  width: 100%;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+}
+
+.chat-screen .header {
+  background: linear-gradient(90deg, var(--white), var(--green), var(--white));
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.chat-screen .header button {
+  padding: 5px 10px;
+  border: 2px solid var(--green);
+  background-color: transparent;
+  color: var(--green);
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+.chat-screen .header button:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.chat-screen .messages {
+  width: 100%;
+  height: calc(100% - 130px);
+  background: url("https://wallpapercave.com/wp/wp4410728.jpg");
+  overflow: auto;
+}
+.chat-screen .messages .message {
+  display: flex;
+  padding: 10px;
+}
+
+.chat-screen .messages .message > div {
+  width: auto;
+  max-width: 80%;
+  background: var(--white);
+  padding: 10px;
+}
+.chat-screen .messages .message.my-message {
+  justify-content: flex-end;
+}
+.chat-screen .messages .message.other-message {
+  justify-content: flex-start;
+}
+.chat-screen .messages .message .name {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.chat-screen .messages .message .text {
+  word-wrap: break-word;
+}
+
+.chat-screen .messages .update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-screen .messages .update div {
+  font-style: italic;
+  background-color: var(--white);
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.chat-screen .typebox {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: var(--white);
+}
+.chat-screen .typebox textarea {
+  outline: none;
+  padding: 10px;
+  font-family: cursive;
+  width: 85%;
+  height: 70px;
+  border: 2px solid var(--green);
+  font-size: 18px;
+  background: rgb(238, 238, 238);
+}
+.chat-screen .typebox button {
+  width: 15%;
+  height: 70px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Starting conversation title */
+.start-conv-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+.start-conv-text {
+  text-align: center;
+  border-radius: 30px;
+  background-color: var(--green);
+  width: 300px;
+  color: var(--white);
+  font-size: 13px;
+  padding: 5px;
+}

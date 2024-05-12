@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="my-main-div">
+      <div class="app">
+        <div class="screen join-screen active">
+          <div class="form">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <h2>Chat-App<sub class="join_text">join</sub></h2>
+              <img
+                src="./images/animation_lmw4khqg_small.gif"
+                alt="not found"
+              />
+            </div>
+            <div class="form-input">
+              <label for="">User Name</label>
+              <input
+                type="text"
+                id="name_inp"
+                placeholder="Enter Your Username..."
+              />
+            </div>
+            <div class="form-input">
+              <button id="join_chat_btn">join chat</button>
+            </div>
+          </div>
+        </div>
+        <div class="screen chat-screen">
+          <div class="header">
+            <h2>Chat-App</h2>
+            <button id="exit_btn">Exit</button>
+          </div>
+
+          <div class="messages" id="message_box">
+            <div class="start-conv-div">
+              <b class="start-conv-text">Let's start the conversation..</b>
+            </div>
+          </div>
+
+          <div class="typebox">
+            <textarea id="send_inp_msg"></textarea>
+            <!-- <input type="text" id="" /> -->
+            <button id="send_msg_btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="code.js"></script>
+  </body>
+</html>
